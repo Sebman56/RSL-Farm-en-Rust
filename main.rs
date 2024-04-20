@@ -19,17 +19,21 @@ fn main() {
     let mut XPManquantChampion = 0;
     
     let mut EnergieAraignee20 = 0;
+    let mut EnergieAraigneeH1 = 0;
     let mut EnergieDragon20 = 0;
+    let mut EnergieDragonH1 = 0;
     let mut EnergieCampagne12_6 = 0;
     
     let mut i = 0;
     
     let Dragon20 = 5782;
     let mut NRoundDragon20 = 0;
+    let mut NRoundDragonH1 = 0;
     
     let Araignee20 = 5800;
     let mut NRoundAraignee20 = 0;
-    
+    let mut NRoundAraigneeH1 = 0;
+
     let CampagneBrutale12_6= 8800;
     let mut NRoundCampagneBrutale12_6 = 0;
     
@@ -100,14 +104,20 @@ println! ("*** {} *** XP manquant du Champion.\n", XPmanquant);
 /* ***Round néc éssaires */
 let NRoundDragon20: usize ;
 NRoundDragon20 = XPmanquant / Dragon20 ;
-println! ("\t*** {} *** Rounds nécéssaires pour qu’un champion {} étoiles atteigne son maximum dans le Dragon 20.\n", NRoundDragon20, SaisieEtoileChampion);
+EnergieDragon20 = NRoundDragon20 *16 ;
+EnergieDragonH1 = NRoundDragon20 *20 ;
+
+println! ("\t*** {} *** Rounds et {} Energies nécéssaires pour qu’un champion {} étoiles atteigne son maximum dans le Dragon 20.\n", NRoundDragon20, EnergieDragon20, SaisieEtoileChampion);
 
 
 let NRoundAraignee20 ;
 NRoundAraignee20 = XPmanquant /Araignee20 ;
-println! ("\t*** {} *** Rounds nécéssaires pour qu’un champion {} étoiles atteigne son maximum dans l’araignée 20.\n", NRoundAraignee20, SaisieEtoileChampion);
+EnergieAraignee20 = NRoundAraignee20 *16;
+EnergieAraigneeH1 = NRoundAraignee20 *20;
+println! ("\t*** {} *** Rounds et {} Energies nécéssaires pour qu’un champion {} étoiles atteigne son maximum dans l’araignée 20.\n", NRoundAraignee20, EnergieAraignee20, SaisieEtoileChampion);
 
 let NRoundCampagneBrutale12_6 ;
 NRoundCampagneBrutale12_6 = XPmanquant / CampagneBrutale12_6 ;
-println! ("\t*** {} *** Rounds nécéssaires pour qu’un champion {} étoiles atteigne son maximum en campagne brutale 12-6.\n", NRoundCampagneBrutale12_6, SaisieEtoileChampion);
+EnergieCampagne12_6 = NRoundCampagneBrutale12_6 *8;
+println! ("\t*** {} *** Rounds et {} Energies nécéssaires pour qu’un champion {} étoiles atteigne son maximum en campagne brutale 12-6.\n", NRoundCampagneBrutale12_6, EnergieCampagne12_6, SaisieEtoileChampion);
 }
